@@ -1,6 +1,7 @@
 {
   "name": "jumper-discord-bot",
   "version": "1.0.0",
+  "type": "module",
   "description": "A team-specific solution to interact with remote workstations connected to a jumpbox",
   "main": "index.js",
   "scripts": {
