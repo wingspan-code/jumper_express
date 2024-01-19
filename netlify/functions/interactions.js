@@ -5,9 +5,9 @@ import {Timer, VerifyDiscordInteraction} from '../../lib/utils.js'
 export default async (req, context) => {
 	const timer = Timer();
 	const response = await VerifyDiscordInteraction(Netlify.env.get("DISCORD_KEY"), req.clone(), () => {
-		const response_to_discord = discord(req); 
+		const response_to_discord = discord(req.clone()); 
 		return response_to_discord;
 	})
-	console.log(`It took ${timer()} to process request ${req.body.id}`);
+	console.log(`respond with ${response}`);
 	return response;
 }
