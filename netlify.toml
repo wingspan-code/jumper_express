@@ -1,5 +1,6 @@
 
 [build]
-echo "Running function builds"
-npm i
-echo "Build successful!"
+command = 
+	'echo "Running function builds" \
+	npm i \
+	echo "Build successful!"'
