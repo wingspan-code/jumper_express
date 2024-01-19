@@ -8,6 +8,6 @@ export default async (req, context) => {
 		const response_to_discord = discord(req.clone()); 
 		return response_to_discord;
 	})
-	console.log(`respond after ${timer()}: ${JSON.stringify(response)}`);
+	console.log(`respond after ${timer()}: ${response.clone().status}`);
 	return response;
 }
