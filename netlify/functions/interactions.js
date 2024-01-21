@@ -8,7 +8,11 @@ export default async (req, context) => {
 		const response_to_discord = discord(req.clone()); 
 		return response_to_discord;
 	})
-	const json = await response.clone().json();
-	console.log(`respond after ${timer()}: ${response.clone().status} -> ${JSON.stringify(json)}`);
+	if(response === undefined){
+		console.log("Unhandled discord interaction");
+	} else {
+		const json = await response.clone().json();
+		console.log(`respond after ${timer()}: ${response.clone().status} -> ${JSON.stringify(json)}`);
+	}
 	return response;
 }
