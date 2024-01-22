@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "register": "node --env-file .env commands"
+    "register": "node --env-file .env commands",
+    "serve": "node --env-file .env commands"
   },
   "repository": {
     "type": "git",
@@ -28,9 +29,9 @@
     "discord": "^0.8.2",
     "discord-interactions": "^3.4.0",
     "express": "^4.18.2",
-    "net-ping": "^1.2.3",
     "node-fetch": "^3.3.2",
+    "ping": "^0.4.4",
     "tweetnacl": "^1.0.3",
-    "wake_on_lan": "^1.0.0"
+    "wol": "^1.0.7"
   }
 }
