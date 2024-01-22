@@ -1,4 +1,4 @@
-import {InstallGlobalCommands} from './utils.js';
+import {InstallGlobalCommands} from './lib/utils.js';
 
 const JUMP_COMMAND = {
   name: 'jump',
@@ -21,6 +21,4 @@ const BOING_COMMAND = {
   type: 1
 }
 
-export default (appId, botToken) => {
-    InstallGlobalCommands(appId, botToken, [JUMP_COMMAND, BOING_COMMAND]); 
-}
+InstallGlobalCommands(process.env.APP_ID, process.env.DISCORD_TOKEN, [JUMP_COMMAND, BOING_COMMAND]); 
