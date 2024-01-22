@@ -1,6 +1,6 @@
 // Main API processing discord interactions
-import discord from '../../lib/discord.js'
-import {Timer, VerifyDiscordInteraction} from '../../lib/utils.js'
+import discord from '../lib/discord.js'
+import {Timer, VerifyDiscordInteraction} from '../lib/utils.js'
 
 export default async (req, context) => {
 	const timer = Timer();

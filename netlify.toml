@@ -1,3 +1,0 @@
-
-[build]
-command = 'echo "Running function builds" \ npm i \ echo "Build successful!"'
