@@ -7,7 +7,7 @@
   "scripts": {
     "test": "test",
     "register": "node --env-file .env commands",
-    "serve": "node --env-file .env commands"
+    "serve": "node --env-file .env server"
   },
   "repository": {
     "type": "git",
