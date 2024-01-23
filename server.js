@@ -1,7 +1,7 @@
 import express from "express"
 
 import discord_bot from "./lib/discord.js"
-import {Timer,VerifyDiscordRequest} from './lib/utils.js'
+import {VerifyDiscordRequest} from './lib/utils.js'
 import ngrok_url from './lib/ngrok.js'
 
 const app = express();
@@ -11,9 +11,7 @@ app.use(express.json({verify: VerifyDiscordRequest(process.env.PUBLIC_KEY)}));
 const PORT = process.env.PORT || 8080;
 
 app.post("/discord_interaction", async (req, res) => {
-  const timer = Timer();
   const response = await discord_bot(req, res);
-  console.log(`Full request processed in ${timer()}`);
   res.send(response);
 });
 
