@@ -12,8 +12,9 @@ const PORT = process.env.PORT || 8080;
 
 app.post("/discord_interaction", async (req, res) => {
   const timer = Timer();
-  await discord_bot(req, res);
+  const response = await discord_bot(req, res);
   console.log(`Full request processed in ${timer()}`);
+  res.send(response);
 });
 
 app.listen(PORT, () => {
