@@ -7,6 +7,7 @@
   "scripts": {
     "test": "test",
     "register": "node --env-file .env commands",
+    "ngrok": "ngrok start jumper-bot --log=stdout > ngrok.log &",
     "serve": "node --env-file .env server"
   },
   "repository": {
