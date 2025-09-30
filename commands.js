@@ -1,3 +1,4 @@
+import {process} from 'node:process';
 import {InstallGlobalCommands} from './lib/utils.js';
 
 const JUMP_COMMAND = {
