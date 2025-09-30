@@ -17,6 +17,5 @@ app.post("/discord_interaction", async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server started at localhost:${PORT}`);
-  console.log(app._router.stack.filter(layer => layer.route !== undefined).forEach(layer => console.log(ngrok_url("./ngrok.log") + layer.route.path)))
 });
 
