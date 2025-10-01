@@ -21,10 +21,4 @@ const BOING_COMMAND = {
   type: 1
 }
 
-const DEBUG_COMMAND = {
-  name: 'zettelkasten',
-  description: 'Debug command to test things',
-  type: 1
-}
-
-InstallGlobalCommands(process.env.APP_ID, process.env.DISCORD_TOKEN, [JUMP_COMMAND, BOING_COMMAND, DEBUG_COMMAND]);
+InstallGlobalCommands(process.env.APP_ID, process.env.DISCORD_TOKEN, [JUMP_COMMAND, BOING_COMMAND]);
